@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Container untuk semua elemen UI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FAF9F9"
+        android:visibility="visible">
+
+        <!-- Tanggal dan Waktu -->
+        <TextView
+            android:id="@+id/textViewDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="Tanggal dan Waktu" />
+
+        <!-- Selamat datang -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat datang di toko Maxca Group"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Judul Aplikasi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTintMode="add"
+            android:drawableTop="@color/black"
+            android:drawableBottom="@android:drawable/ic_menu_gallery"
+            android:fontFamily="sans-serif-condensed"
+            android:foregroundTint="#FFFFFF"
+            android:gravity="center"
+            android:text="Aplikasi Kasir Sederhana"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- Nama Pelanggan -->
+        <TextView
+            android:id="@+id/textViewStoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="#F6EEEE"
+            android:text="Alamat Toko: Jl.Taman Karya No. 123\nKode Pos: 12345\nTelepon: 123-456-7890"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Pelanggan"
+            android:inputType="text"
+            android:padding="16dp" />
+
+        <!-- Item Pulsa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1D7E3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewItemNamePulsa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="Pulsa - Rp. 50,000" />
+
+            <EditText
+                android:id="@+id/editTextQuantityPulsa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Item Token -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E399D7"
+            android:backgroundTint="#E1C4CE"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewItemNameToken"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="Token - Rp. 100,000" />
+
+            <EditText
+                android:id="@+id/editTextQuantityToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Item E-Money -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDD4EA"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewItemNameEmoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="E-Money - Rp. 50,000" />
+
+            <EditText
+                android:id="@+id/editTextQuantityEmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Radio Group Membership -->
+        <RadioGroup
+            android:id="@+id/radioGroupMembership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioButtonMember"
+                android:layout_width="254dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="#B51616"
+                android:text="Membership (5% Diskon)" />
+
+            <RadioButton
+                android:id="@+id/radioButtonNonMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non-Member" />
+        </RadioGroup>
+
+        <!-- Button Total Bayar -->
+        <Button
+            android:id="@+id/buttonProcess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#EAB5D0"
+            android:text="Total Bayar" />
+
+        <!-- Informasi Total Pembayaran -->
+        <TextView
+            android:id="@+id/textViewReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="Struk Pembayaran" />
+
+
+        <TextView
+            android:id="@+id/textViewTotalPaymentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total Pembayaran:"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Bacaan bawah struk -->
+        <TextView
+            android:id="@+id/textViewPaymentProof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HARAP TANDA TERIMA INI DISIMPAN SEBAGAI BUKTI PEMBAYARAN YANG SAH"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/buttonProcess1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#EAB5D0"
+            android:text="Print" />
+
+    </LinearLayout>
+</ScrollView>
+
